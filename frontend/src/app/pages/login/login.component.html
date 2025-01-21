@@ -1,0 +1,29 @@
+<app-login-default-layout
+  label="Login into your account"
+  primaryBtnText="Login Now"
+  secondaryBtnText="Signup Now"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!loginForm.valid"
+>
+  <form [formGroup]="loginForm">
+    <app-login-pi
+      formControlName="email"
+      inputName="email"
+      type="email"
+      label="Email"
+      placeholder="johndoe@gmail.com"
+    >
+      <mat-icon fontIcon="mail_outline"></mat-icon>
+    </app-login-pi>
+    <app-login-pi
+      formControlName="password"
+      inputName="password"
+      type="password"
+      label="Your Password"
+    >
+      <mat-icon fontIcon="lock_outline"></mat-icon>
+    </app-login-pi>
+    <span>Forgot Password!</span>
+  </form>
+</app-login-default-layout>

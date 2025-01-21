@@ -1,0 +1,45 @@
+<app-login-default-layout
+  label="Sign in and start today!"
+  primaryBtnText="Signup Now"
+  secondaryBtnText="Login Now"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!signupForm.valid"
+>
+  <form [formGroup]="signupForm">
+    <app-login-pi
+      formControlName="name"
+      inputName="name"
+      type="text"
+      label="Your name"
+      placeholder="John Doe"
+    >
+      <mat-icon fontIcon="mail_outline"></mat-icon>
+    </app-login-pi>
+    <app-login-pi
+      formControlName="email"
+      inputName="email"
+      type="email"
+      label="Email"
+      placeholder="johndoe@gmail.com"
+    >
+      <mat-icon fontIcon="mail_outline"></mat-icon>
+    </app-login-pi>
+    <app-login-pi
+      formControlName="password"
+      inputName="password"
+      type="password"
+      label="Your Password"
+    >
+      <mat-icon fontIcon="lock_outline"></mat-icon>
+    </app-login-pi>
+    <app-login-pi
+      formControlName="passwordConfirm"
+      inputName="passwordConfirm"
+      type="password"
+      label="Confirm your Password"
+    >
+      <mat-icon fontIcon="lock_outline"></mat-icon>
+    </app-login-pi>
+  </form>
+</app-login-default-layout>
